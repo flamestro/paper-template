@@ -1,0 +1,301 @@
+\documentclass[11pt,oneside,a4paper]{book}
+\usepackage[hidelinks]{hyperref}
+\usepackage{breakcites}
+\usepackage[nottoc]{tocbibind}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{ellipsis}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage[main=english, ngerman]{babel}
+\usepackage[parfill]{parskip}
+\usepackage[final]{graphicx}
+\usepackage{textcomp}
+\usepackage{epsfig}
+\usepackage[final]{listings}
+\usepackage{wrapfig}
+\usepackage{geometry}
+\usepackage{wrapfig}
+\usepackage{acro}
+\usepackage{longtable}
+\usepackage[utf8]{inputenc}
+\usepackage[english=american]{csquotes}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{external}
+\tikzexternalize[prefix=figures/]
+\pgfkeys{/pgf/images/include external/.code=\includegraphics{#1}}
+\definecolor{mint}{rgb}{0.24, 0.71, 0.54}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.14, ticklabel style={font=\small}}
+\usepackage{bookmark}
+\usepackage{booktabs}
+\usepackage[htt]{hyphenat}
+\usepackage{fancyhdr}
+\usepackage{ifdraft}
+\usepackage[ddmmyyyy,hhmmss]{datetime}
+\renewcommand{\dateseparator}{.}
+\usepackage{seqsplit}
+\usepackage{epigraph}
+\setlength\epigraphwidth{12cm}
+\setlength\epigraphrule{0pt}
+\usepackage{makecell}
+\usepackage{multirow}
+\usepackage{adjustbox}
+\usepackage{lscape}
+\usepackage{hyphenat}
+\usepackage{ntheorem}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+\usepackage{epsfig}
+\usepackage{epstopdf}
+\usepackage[capitalise]{cleveref}
+\usepackage{times}
+\usepackage{footmisc}
+\usepackage{enumerate}
+\usepackage{float}
+\usepackage{tabularx}
+\usepackage{svg}
+\usepackage{subfigure} 
+\geometry{
+  verbose=false,
+  a4paper,
+  heightrounded
+}
+\usepackage[
+backend=bibtex,
+style=numeric,
+sorting=none
+]{biblatex}
+\addbibresource{bib/references.bib}
+\usepackage{appendix}
+\usepackage{hyperref}
+\usepackage{eurosym}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{dblfloatfix}
+\usepackage{wrapfig}
+\usepackage[T1]{fontenc}
+\hypersetup{
+    colorlinks=false
+}
+
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\makeatletter
+\AtBeginDocument{\let\book@l@chapter\l@chapter}
+\newcommand{\demotechaptersintoc}{%
+  \addtocontents{toc}{\let\protect\l@chapter\protect\l@section}%
+}
+\newcommand{\promotechaptersintoc}{%
+  \addtocontents{toc}{\let\protect\l@chapter\protect\book@l@chapter}%
+}
+\lstset{
+  language=Python,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=left,
+  frame=none,
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3,
+  xleftmargin=2em,
+  framexleftmargin=2em
+}
+
+\usepackage[xcolor,outerbars]{changebar}
+
+\setlength{\changebarsep}{2pt}
+
+\setlength\changebarsep{5pt}
+\newenvironment{ADDED}{%
+	\cbcolor{green}%
+	\par%
+	\cbstart%
+}{%
+	%
+	\cbend%
+}
+
+\begin{document}
+
+\begin{titlepage}
+	\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+	\center
+
+{\LARGE \textbf{Name of Your Organisation}}
+
+\vspace{0.5cm}
+
+{\large Department Name (Part 1)\\[1mm]}
+{\large Department Name (Part 2 if needed)\\[5mm]}
+
+Address Supplement\\
+Street and House number \\
+Zip Code and City\\
+Website\\ [1.0cm]
+\includegraphics[width=4cm]{resources/logo.png}
+
+\vspace*{1.0cm}
+
+{\LARGE Type of Paper (Bachelor Thesis)}\\ [1.0cm]
+
+	\HRule\\[0.4cm]
+{\LARGE \textbf{Thema (Line 1)}}\\
+\vspace*{0.3cm}
+{\LARGE \textbf{Thema (Line 2 if needed)}}\\
+	\HRule\\[1cm]
+	\begin{minipage}{0.4\textwidth}
+		\begin{flushleft}
+			\large
+			\textit{Author}\\
+			Firstname \textsc{Lastname}\\
+		\end{flushleft}
+	\end{minipage}
+	~
+	\begin{minipage}{0.4\textwidth}
+		\begin{flushright}
+			\large
+			\textit{Supervisors}\\
+			1. Prof. Isa \textsc{Celil}\\ % Supervisor's name
+			2. Prof. Henry \textsc{Mustermann}
+			
+			\textit{Assistant Supervisor}\\
+			Fatma \textsc{Mustermann}\\ % Supervisor's name
+		\end{flushright}
+	\end{minipage}
+
+	
+	\vfill\vfill\vfill
+    
+	\large Matriculation Number: xxxxxx\\[0.5cm] 
+	
+	{\large xx.xx.xxxx}
+\end{titlepage}
+
+% add a empty page
+\newpage\null\thispagestyle{empty}\newpage
+
+\vspace*{6cm}
+
+\noindent
+I hereby declare that the thesis submitted is my own, unaided work, completed without any
+unpermitted external help. Only the sources and resources listed were used.
+The independent and unaided completion of the thesis is affirmed by affidavit:
+\vspace{2cm}
+
+\noindent
+Berlin, xx.xx.xxxx
+
+\vspace{3cm}
+
+\hspace*{7cm}%
+\dotfill\\
+\hspace*{8.5cm}%
+\textit{(Signature (Firstname Lastname)))}
+\thispagestyle{empty}
+
+\pagenumbering{roman} 
+\begin{LARGE} \centering \textbf{Abstract}\\[4ex]
+\end{LARGE}
+
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+
+\begin{LARGE} \centering \textbf{Zusammenfassung}\\[4ex]
+\end{LARGE}
+
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+\thispagestyle{empty}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+{
+  \hypersetup{linkcolor=black}
+  \tableofcontents
+}
+
+
+\chapter{Introduction}
+\pagenumbering{arabic} 
+
+
+\section{Motivation}
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{Problem Statement and the Research Question}
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+
+\section{Approach}
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+
+\section{Outline}
+
+This thesis contains the following eight chapters.
+
+\begin{description}
+\item[Chapter 2] describes the background of our work. Additionally, it represents the relation of other works with ours.
+
+\item[Chapter 3] Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+\item[Chapter 4] Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+\item[Chapter 5] Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+\item[Chapter 6] Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+\item[Chapter 7] Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+\item[Chapter 8] Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+\end{description}
+\chapter{Background and Related Work}
+
+
+\section{Thema x}
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+\chapter{Conclusion}
+
+Lorem\cite{213108} ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy\cite{pullrequest2413} eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+
+\section{Summary}
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+\section{Dissemination}
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+\section{Problems Encountered}
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+
+\section{Outlook}
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+\appendix
+\addappheadtotoc
+\demotechaptersintoc
+\chapter{Some Appendix}
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+\chapter{SD Card}
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+\printbibliography[title={References}, nottype=online]
+\printbibliography[title={Online References}, type=online]
+
+\end{document}
